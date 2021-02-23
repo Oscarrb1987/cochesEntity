@@ -1,0 +1,80 @@
+﻿@model IEnumerable<cochesEntity.vehiculos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vehiculos</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numPuertas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kilometros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.garantia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fotografia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numPuertas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kilometros)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.garantia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fotografia)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+           
+    </tr>
+}
+
+</table>
