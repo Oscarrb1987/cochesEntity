@@ -18,6 +18,7 @@ namespace cochesEntity
         public CochesCutresEntities()
             : base("name=CochesCutresEntities")
         {
+            base.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

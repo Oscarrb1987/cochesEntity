@@ -164,6 +164,10 @@
     <Compile Include="vehiculos.cs">
       <DependentUpon>ModelCoches.tt</DependentUpon>
     </Compile>
+    <Compile Include="WebServiceSOAP.asmx.cs">
+      <DependentUpon>WebServiceSOAP.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -186,6 +190,7 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="WebServiceSOAP.asmx" />
     <EntityDeploy Include="ModelCoches.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelCoches.Designer.cs</LastGenOutput>

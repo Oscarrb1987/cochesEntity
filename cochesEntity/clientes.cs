@@ -11,7 +11,9 @@ namespace cochesEntity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Xml.Serialization;
+
+    [Serializable]
     public partial class clientes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,6 +31,7 @@ namespace cochesEntity
         public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [XmlIgnore]
         public virtual ICollection<operacion> operacion { get; set; }
     }
 }
